@@ -2,8 +2,8 @@ import "./Boton.css";
 
 const Boton = ({nombre}) => {
   return (
-    <div className="btn">
-      <button>{nombre}</button>
+    <div>
+      <button className="btn">{nombre}</button>
     </div>
   );
 };

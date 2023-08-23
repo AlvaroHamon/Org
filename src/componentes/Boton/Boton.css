@@ -1,18 +1,20 @@
 .btn {
-    margin-bottom: 32px;
+  border-radius: 10px;
+  background: #6278f7;
+  color: #fff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 24px 32px;
+  width: 167px;
+  margin: 32px 0;
+  cursor: pointer;
 }
 
-.btn button {
-    border-radius: 10px;
-    background: #6278f7;
-    color: #fff;
-    border: none;
-    font-size: 20px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 29px;
-    width: 167px;
-    
+.btn:hover{
+  color: #95FFD4;
 }

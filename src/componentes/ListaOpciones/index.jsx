@@ -2,7 +2,6 @@ import "./ListaOpciones.css";
 
 const ListaOpciones = () => {
   const equipos = [
-    "",
     "Programación",
     "Front End",
     "Data Science",
@@ -16,7 +15,9 @@ const ListaOpciones = () => {
     <div className="lista-opciones">
       <label htmlFor="">Grupo</label>
       <select name="" id="">
-        {equipos.map((equipo, index) => ( <option key={index}>{equipo}</option> ))}
+        {equipos.map((equipo, index) => (
+          <option key={index}>{equipo}</option>
+        ))}
       </select>
     </div>
   );
