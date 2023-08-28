@@ -10,13 +10,15 @@ const Formulario = () => {
     let datos = {
       nombre,
       puesto,
-      foto
+      foto,
+      equipo
     };
     console.log(datos);
   };
   const [nombre, actualizarNombre] = useState("");
   const [puesto, actualizarPuesto] = useState("");
   const [foto, actualizarfoto] = useState("");
+  const [equipo, actualizarEquipo] = useState("");
   const manejarCambios = (e) => {
     actualizarNombre(e.target.value);
   };
@@ -46,7 +48,7 @@ const Formulario = () => {
           valor={foto}
           actualizarValor={actualizarfoto}
         />
-        <ListaOpciones />
+        <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo} />
         <Boton nombre="Crear" />
       </form>
     </section>
