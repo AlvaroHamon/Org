@@ -4,7 +4,7 @@ import CampoTexto from "../CampoTexto";
 import ListaOpciones from "../ListaOpciones";
 import Boton from "../Boton";
 
-const Formulario = () => {
+const Formulario = (props) => {
   const manejarEnvio = (e) => {
     e.preventDefault();
     let datos = {
@@ -48,7 +48,7 @@ const Formulario = () => {
           valor={foto}
           actualizarValor={actualizarfoto}
         />
-        <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo} />
+        <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo} equipos={props.equipos}/>
         <Boton nombre="Crear" />
       </form>
     </section>

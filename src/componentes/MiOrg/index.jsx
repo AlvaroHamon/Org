@@ -11,7 +11,6 @@ const MiOrg = (props) => {
   //   console.log("Mostrar/Ocultar elemento");
   //   actualizarMostrar(!mostrar);
   // };
-  console.log(props);
   return (
     <section className="orgSection">
       <h3 className="tittle">Mi Organización</h3>
