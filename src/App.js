@@ -8,7 +8,45 @@ import Footer from './componentes/Footer';
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(true)
-  const [colaboradores, actualizarColaboradores] = useState([])
+  const [colaboradores, actualizarColaboradores] = useState([
+
+    {
+      equipo: "Front End",
+      foto: "https://github.com/alvarohamon.png",
+      nombre: "Alvaro Hamon",
+      puesto: "Desarrollador Front End"
+    },
+    {
+      equipo: "Front End",
+      foto: "https://github.com/harlandlohora.png",
+      nombre: "Harland Lohora",
+      puesto: "Instructor en Alura Latam"
+    },
+    {
+      equipo: "Programación",
+      foto: "https://github.com/genesysrm.png",
+      nombre: "Genesys Rondón",
+      puesto: "Desarrolladora de software e instructora"
+    },
+    {
+      equipo: "Data Science",
+      foto: "https://github.com/JeanmarieAluraLatam.png",
+      nombre: "Jeanmarie Quijada",
+      puesto: "Instructora en Alura Latam"
+    },
+    {
+      equipo: "Programación",
+      foto: "https://github.com/christianpva.png",
+      nombre: "Christian Velasco",
+      puesto: "Head de Alura e instructor"
+    },
+    {
+      equipo: "Data Science",
+      foto: "https://github.com/JoseDarioGonzalezCha.png",
+      nombre: "Jose Gonzalez",
+      puesto: "Dev. FullStack"
+    }
+  ])
 
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario)
