@@ -1,15 +1,28 @@
+import Colaborador from "../Colaborador";
 import "./Equipo.css";
 
 const Equipo = (props) => {
-  const { linea, fondo, titulo } = props.datos;
-  const colorFondo = { backgroundColor: fondo };
-  const colorLinea = { borderColor: linea };
+  //props para el estilo CSS
+  const { colorPrimario, colorSecundario, titulo } = props.datos;
+  const secundario = { backgroundColor: colorSecundario };
+  const principal = { borderColor: colorPrimario };
+
+  //Lista de colaboradores
+  const { colaboradores } = props;
 
   return (
-    <section className="equipo" style={colorFondo}>
-      <h3 style={colorLinea}>{titulo}</h3>
-      <div className="colaboradores"></div>
-    </section>
+    <>
+      {colaboradores.length > 0 && (
+        <section className="equipo" style={secundario}>
+          <h3 style={principal}>{titulo}</h3>
+          <div className="colaboradores">
+            {colaboradores.map((colaborador, index) => (
+              <Colaborador datos={colaborador} key={index} colorPrimario={colorPrimario}/>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 
