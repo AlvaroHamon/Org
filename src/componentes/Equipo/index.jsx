@@ -4,12 +4,12 @@ import "./Equipo.css";
 
 const Equipo = (props) => {
   //props para el estilo CSS
-  const { colorPrimario, colorSecundario, titulo } = props.datos;
+  const { colorPrimario, titulo, id } = props.datos;
   const secundario = { backgroundColor: hexToRgba(colorPrimario, "0.6") };
   const estiloTexto = { borderColor: colorPrimario };
 
   //Lista de colaboradores
-  const { colaboradores, eliminarColaborador, actualizarColor } = props;
+  const { colaboradores, eliminarColaborador, actualizarColor, like } = props;
 
   return (
     <>
@@ -20,7 +20,7 @@ const Equipo = (props) => {
             className="input-color"
             value={hexToRgba(colorPrimario, "0.6")}
             onChange={(evento) => {
-              actualizarColor(evento.target.value, titulo);
+              actualizarColor(evento.target.value, id);
             }}
           />
           <h3 style={estiloTexto}>{titulo}</h3>
@@ -31,6 +31,7 @@ const Equipo = (props) => {
                 key={index}
                 colorPrimario={colorPrimario}
                 eliminarColaborador={eliminarColaborador}
+                like={like}
               />
             ))}
           </div>
