@@ -55,7 +55,7 @@ function App() {
     {
       id: uuid(),
       titulo: "Programación",
-      colorPrimario: "#57C278",
+      colorPrimario: "#57C2",
       colorSecundario: "#D9F7E9",
     },
 
